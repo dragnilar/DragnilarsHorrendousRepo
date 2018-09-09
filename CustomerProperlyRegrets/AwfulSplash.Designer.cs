@@ -34,6 +34,7 @@
             this.labelBuyingThis = new System.Windows.Forms.Label();
             this.labelObligatoryCopyRight = new System.Windows.Forms.Label();
             this.labelRandomMessage = new System.Windows.Forms.Label();
+            this.linkLabelIcons8 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrokenImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +90,22 @@
             this.labelRandomMessage.Text = "[RANDOM MESSAGE]";
             this.labelRandomMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // linkLabelIcons8
+            // 
+            this.linkLabelIcons8.AutoSize = true;
+            this.linkLabelIcons8.Location = new System.Drawing.Point(585, 162);
+            this.linkLabelIcons8.Name = "linkLabelIcons8";
+            this.linkLabelIcons8.Size = new System.Drawing.Size(66, 13);
+            this.linkLabelIcons8.TabIndex = 5;
+            this.linkLabelIcons8.TabStop = true;
+            this.linkLabelIcons8.Text = "Uses Icons8";
+            // 
             // AwfulSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 187);
+            this.Controls.Add(this.linkLabelIcons8);
             this.Controls.Add(this.labelRandomMessage);
             this.Controls.Add(this.labelObligatoryCopyRight);
             this.Controls.Add(this.labelBuyingThis);
@@ -117,5 +129,6 @@
         private System.Windows.Forms.Label labelBuyingThis;
         private System.Windows.Forms.Label labelObligatoryCopyRight;
         private System.Windows.Forms.Label labelRandomMessage;
+        private System.Windows.Forms.LinkLabel linkLabelIcons8;
     }
 }

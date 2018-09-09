@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bogus;
+using CustomerProperlyRegrets.AnciliaryStuffyImportantClassModuleFormCrap;
 using CustomerProperlyRegrets.AncilliaryStuffyImportantClassModuleFormCrap;
 
 namespace CustomerProperlyRegrets
@@ -21,7 +23,10 @@ namespace CustomerProperlyRegrets
             BringToFront();
             GetYearsForToolStrip();
             HookUpEvents();
+            BindData();
         }
+
+
 
         private void GetYearsForToolStrip()
         {
@@ -46,6 +51,16 @@ namespace CustomerProperlyRegrets
             HookUpView();
             HookUpThePengas();
             HookUpUseless();
+            HookUpGridEvents();
+            HookUpYears();
+        }
+
+        private void HookUpYears()
+        {
+            for (int i = 0; i <= yearsToolStripMenuItem.DropDownItems.Count - 1; i++)
+            {
+                yearsToolStripMenuItem.DropDownItems[i].Click += OnYearClick;
+            }
         }
 
         private void HookUpUseless()
@@ -56,7 +71,8 @@ namespace CustomerProperlyRegrets
         private void HookUpButtons()
         {
             buttonCrash.Click += (sender, args) => Errors.Crash();
-            buttonNothing.Click += (sender, args) => Errors.Error();
+            buttonNothing.Click += (sender, args) => Errors.ThrowRandomException();
+            buttonDirty.Click += ButtonDirtyOnClick;
         }
 
         private void HookUpfile()
@@ -68,7 +84,7 @@ namespace CustomerProperlyRegrets
         {
             minimizeToolStripMenuItem.Click += (sender, args) => this.WindowState = FormWindowState.Minimized;
             maximizeToolStripMenuItem.Click += (sender, args) => this.WindowState = FormWindowState.Maximized;
-            errorToolStripMenuItem.Click += (sender, args) => Errors.Error();
+            errorToolStripMenuItem.Click += (sender, args) => Errors.ThrowRandomException();
         }
 
         private void HookUpThePengas()
@@ -79,6 +95,65 @@ namespace CustomerProperlyRegrets
             whats910ToolStripMenuItem.Click += (sender, args) => BrowserLinks.NinePlusTen();
         }
 
+        private void HookUpGridEvents()
+        {
+           dataGridViewTrash.DoubleClick += DataGridViewTrashOnDoubleClick;
+        }
+
+
+
         #endregion
+
+        private void BindData()
+        {
+            var bogus = new Faker();
+            var generator = new DirtyDataGenerator();
+            dataGridViewTrash.DataSource = generator.GetDirtyDataList(bogus.Random.Int(10,500));
+            listBoxListOfCrap.DataSource = generator.GetDirtyDataList(bogus.Random.Int(10, 25));
+        }
+
+        private void DataGridViewTrashOnDoubleClick(object sender, EventArgs e)
+        {
+            if (dataGridViewTrash.CurrentRow != null)
+            {
+                var selectedItem = dataGridViewTrash.CurrentRow.DataBoundItem as DirtyData;
+                ShowDirtyClickMessage(selectedItem);
+
+            }
+        }
+
+        private void ButtonDirtyOnClick(object sender, EventArgs e)
+        {
+            if (listBoxListOfCrap.Items.Count > 0 && listBoxListOfCrap.SelectedIndex >= 0)
+            {
+                var selectedItem = listBoxListOfCrap.SelectedItem as DirtyData;
+                (dataGridViewTrash.DataSource as BindingList<DirtyData>)?.Add(selectedItem);
+                ShowItsDirtyMessage(selectedItem);
+                (listBoxListOfCrap.DataSource as BindingList<DirtyData>)?.RemoveAt(listBoxListOfCrap.SelectedIndex);
+                listBoxListOfCrap.SelectedIndex = 0;
+            }
+        }
+
+        private void OnYearClick(object sender, EventArgs e)
+        {
+            new FakeConfigGenerator().CreateFakeConfigXmlFile();
+            MessageBox.Show(
+                "A new configuration file is now on your desktop. Please do not delete it, or the whole world will end.",
+                "IMPORTANT CONFIG FILE CREATED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void ShowItsDirtyMessage(DirtyData selectedItem)
+        {
+            MessageBox.Show($"EWWW, {selectedItem.Name} IS DIRTY!!!", "UNHANDLED MIND BLOWING EXCEPTION ERROR", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
+
+        private void ShowDirtyClickMessage(DirtyData selectedItem)
+        {
+            MessageBox.Show($"EWWW, {selectedItem.Name} IS DIRTY, WHY DID YOU SELECT IT!?!", "HOW DARE YOU ERROR ERROR ERROR #%)&(#@%#", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
+
+
     }
 }

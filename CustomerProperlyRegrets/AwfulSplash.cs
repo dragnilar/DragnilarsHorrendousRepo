@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bogus;
+using CustomerProperlyRegrets.AnciliaryStuffyImportantClassModuleFormCrap;
 using CustomerProperlyRegrets.AncilliaryStuffyImportantClassModuleFormCrap;
 
 namespace CustomerProperlyRegrets
@@ -18,15 +20,19 @@ namespace CustomerProperlyRegrets
         {
             InitializeComponent();
             Shown += OnShown;
+            linkLabelIcons8.Click += LinkLabelIcons8OnClick;
 
+        }
+
+        private void LinkLabelIcons8OnClick(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://icons8.com");
         }
 
         private void OnShown(object sender, EventArgs e)
         {
-            var randomMessages = new RandomMessages();
-            var rand = new Random();
-            var index = rand.Next(randomMessages.Messages.Count);
-            labelRandomMessage.Text = randomMessages.Messages[index];
+            var bogus = new Faker();
+            labelRandomMessage.Text = RandomMessages.SplashScreenMessages[bogus.Random.Int(0, RandomMessages.SplashScreenMessages.Count - 1)];
         }
 
     }
