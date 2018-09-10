@@ -95,7 +95,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RandomPictureWindow.resx">
+      <DependentUpon>RandomPictureWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CustomerProperlyRegrets.AncilliaryStuffyImportantClassModuleFormCrap.DirtyData.datasource" />
     <None Include="Properties\Settings.settings">
@@ -112,6 +116,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\CPR Loading Failed Message.png" />
+    <Content Include="Images\CPR Loading Message.png" />
+    <Content Include="Images\Trash Can_50px.png" />
+    <Content Include="Images\trash_can_50px_pgn_icon.ico" />
+    <None Include="Resources\LoadFailedError.png" />
     <Content Include="trash_can_50px_pgn_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

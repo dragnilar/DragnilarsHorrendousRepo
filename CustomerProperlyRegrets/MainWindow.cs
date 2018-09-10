@@ -53,7 +53,10 @@ namespace CustomerProperlyRegrets
             HookUpUseless();
             HookUpGridEvents();
             HookUpYears();
+            HookUpWindowEvents();
         }
+
+
 
         private void HookUpYears()
         {
@@ -66,6 +69,7 @@ namespace CustomerProperlyRegrets
         private void HookUpUseless()
         {
             chickensToolStripMenuItem.Click += (sender, args) => Errors.ShutDown();
+            unknownToolStripMenuItem.Click += UnknownToolStripMenuItemOnClick;
         }
 
         private void HookUpButtons()
@@ -100,6 +104,11 @@ namespace CustomerProperlyRegrets
            dataGridViewTrash.DoubleClick += DataGridViewTrashOnDoubleClick;
         }
 
+        private void HookUpWindowEvents()
+        {
+            Closing += (sender, args) => Errors.Crash();
+        }
+
 
 
         #endregion
@@ -132,6 +141,13 @@ namespace CustomerProperlyRegrets
                 (listBoxListOfCrap.DataSource as BindingList<DirtyData>)?.RemoveAt(listBoxListOfCrap.SelectedIndex);
                 listBoxListOfCrap.SelectedIndex = 0;
             }
+        }
+
+        private void UnknownToolStripMenuItemOnClick(object sender, EventArgs e)
+        {
+            var window = new RandomPictureWindow {StartPosition = FormStartPosition.CenterParent};
+            window.Show();
+
         }
 
         private void OnYearClick(object sender, EventArgs e)

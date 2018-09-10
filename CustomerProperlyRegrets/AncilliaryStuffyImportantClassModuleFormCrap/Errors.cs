@@ -17,8 +17,7 @@ namespace CustomerProperlyRegrets.AnciliaryStuffyImportantClassModuleFormCrap
     {
         public static void Crash()
         {
-            Console.WriteLine("Stack Overflow Imminent, I WILL CRASH!");
-            Crash();
+            Environment.FailFast("I crashed on purpose :P");
         }
 
         public static void ShutDown()
