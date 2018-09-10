@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomerProperlyRegrets.AnciliaryStuffyImportantClassModuleFormCrap
+namespace CustomerProperlyRegrets.AncillaryStuffyImportantClassModuleFormCrap
 {
     public static class BrowserLinks
     {

@@ -1,4 +1,4 @@
-﻿namespace CustomerProperlyRegrets
+﻿namespace CustomerProperlyRegrets.ViewsWindowsWhatever
 {
     partial class AwfulSplash
     {

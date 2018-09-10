@@ -1,4 +1,4 @@
-﻿namespace CustomerProperlyRegrets
+﻿namespace CustomerProperlyRegrets.ViewsWindowsWhatever
 {
     partial class MainWindow
     {
@@ -74,7 +74,7 @@
             // 
             // dirtyDataBindingSource
             // 
-            this.dirtyDataBindingSource.DataSource = typeof(CustomerProperlyRegrets.AncilliaryStuffyImportantClassModuleFormCrap.DirtyData);
+            this.dirtyDataBindingSource.DataSource = typeof(CustomerProperlyRegrets.AncillaryStuffyImportantClassModuleFormCrap.DirtyData);
             // 
             // dataGridViewTrash
             // 

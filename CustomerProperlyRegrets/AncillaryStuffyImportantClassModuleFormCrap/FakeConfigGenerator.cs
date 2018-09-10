@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Bogus;
 
-namespace CustomerProperlyRegrets.AncilliaryStuffyImportantClassModuleFormCrap
+namespace CustomerProperlyRegrets.AncillaryStuffyImportantClassModuleFormCrap
 {
     public class FakeConfigGenerator
     {

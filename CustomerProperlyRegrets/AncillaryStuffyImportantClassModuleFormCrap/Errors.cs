@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Bogus;
 
-namespace CustomerProperlyRegrets.AnciliaryStuffyImportantClassModuleFormCrap
+namespace CustomerProperlyRegrets.AncillaryStuffyImportantClassModuleFormCrap
 {
     public static class Errors
     {

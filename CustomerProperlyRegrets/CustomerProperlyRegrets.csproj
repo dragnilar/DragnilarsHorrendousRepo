@@ -54,37 +54,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AncilliaryStuffyImportantClassModuleFormCrap\BrowserLinks.cs" />
-    <Compile Include="AncilliaryStuffyImportantClassModuleFormCrap\DirtyData.cs" />
-    <Compile Include="AncilliaryStuffyImportantClassModuleFormCrap\DirtyDataGenerator.cs" />
-    <Compile Include="AncilliaryStuffyImportantClassModuleFormCrap\Errors.cs" />
-    <Compile Include="AncilliaryStuffyImportantClassModuleFormCrap\FakeConfigGenerator.cs" />
-    <Compile Include="AncilliaryStuffyImportantClassModuleFormCrap\FakeConfigurationData.cs" />
-    <Compile Include="AncilliaryStuffyImportantClassModuleFormCrap\RandomMessages.cs" />
-    <Compile Include="AwfulSplash.cs">
+    <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\BrowserLinks.cs" />
+    <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\DirtyData.cs" />
+    <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\DirtyDataGenerator.cs" />
+    <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\Errors.cs" />
+    <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\FakeConfigGenerator.cs" />
+    <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\FakeConfigurationData.cs" />
+    <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\RandomMessages.cs" />
+    <Compile Include="ViewsWindowsWhatever\AwfulSplash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AwfulSplash.Designer.cs">
+    <Compile Include="ViewsWindowsWhatever\AwfulSplash.Designer.cs">
       <DependentUpon>AwfulSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.cs">
+    <Compile Include="ViewsWindowsWhatever\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainWindow.Designer.cs">
+    <Compile Include="ViewsWindowsWhatever\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomPictureWindow.cs">
+    <Compile Include="ViewsWindowsWhatever\RandomPictureWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RandomPictureWindow.Designer.cs">
+    <Compile Include="ViewsWindowsWhatever\RandomPictureWindow.Designer.cs">
       <DependentUpon>RandomPictureWindow.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AwfulSplash.resx">
+    <EmbeddedResource Include="ViewsWindowsWhatever\AwfulSplash.resx">
       <DependentUpon>AwfulSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainWindow.resx">
+    <EmbeddedResource Include="ViewsWindowsWhatever\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -97,7 +97,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RandomPictureWindow.resx">
+    <EmbeddedResource Include="ViewsWindowsWhatever\RandomPictureWindow.resx">
       <DependentUpon>RandomPictureWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

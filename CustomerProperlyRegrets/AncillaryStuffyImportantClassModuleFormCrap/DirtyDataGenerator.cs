@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bogus;
-using CustomerProperlyRegrets.AncilliaryStuffyImportantClassModuleFormCrap;
+using CustomerProperlyRegrets.AncillaryStuffyImportantClassModuleFormCrap;
 
-namespace CustomerProperlyRegrets.AnciliaryStuffyImportantClassModuleFormCrap
+namespace CustomerProperlyRegrets.AncillaryStuffyImportantClassModuleFormCrap
 {
     public class DirtyDataGenerator
     {

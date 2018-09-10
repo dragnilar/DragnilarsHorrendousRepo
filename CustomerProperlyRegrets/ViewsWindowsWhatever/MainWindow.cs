@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bogus;
-using CustomerProperlyRegrets.AnciliaryStuffyImportantClassModuleFormCrap;
-using CustomerProperlyRegrets.AncilliaryStuffyImportantClassModuleFormCrap;
+using CustomerProperlyRegrets.AncillaryStuffyImportantClassModuleFormCrap;
 
-namespace CustomerProperlyRegrets
+namespace CustomerProperlyRegrets.ViewsWindowsWhatever
 {
     public partial class MainWindow : Form
     {
