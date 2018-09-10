@@ -19,22 +19,6 @@ namespace CustomerProperlyRegrets.ViewsWindowsWhatever
             BindData();
         }
 
-
-
-        private void GetYearsForToolStrip()
-        {
-            var futureDate = DateTime.Now.AddYears(+1);
-            yearsToolStripMenuItem.DropDownItems.Add(futureDate.Year.ToString());
-
-            yearsToolStripMenuItem.DropDownItems.Add(DateTime.Now.Year.ToString());
-
-            for (int i = 1; i < 7; i++)
-            {
-                var date = DateTime.Now.AddYears(-i);
-                yearsToolStripMenuItem.DropDownItems.Add(date.Year.ToString());
-            }
-        }
-
         #region Event Hook Ups
 
         private void HookUpEvents()
@@ -61,9 +45,12 @@ namespace CustomerProperlyRegrets.ViewsWindowsWhatever
 
         private void HookUpUseless()
         {
-            chickensToolStripMenuItem.Click += (sender, args) => Errors.ShutDown();
+            killMeToolStripMenuItem.Click += (sender, args) => Errors.ShutDown();
             unknownToolStripMenuItem.Click += UnknownToolStripMenuItemOnClick;
+            chickensToolStripMenuItem.Click += ChickensToolStripMenuItemOnClick;
         }
+
+
 
         private void HookUpButtons()
         {
@@ -106,13 +93,7 @@ namespace CustomerProperlyRegrets.ViewsWindowsWhatever
 
         #endregion
 
-        private void BindData()
-        {
-            var bogus = new Faker();
-            var generator = new DirtyDataGenerator();
-            dataGridViewTrash.DataSource = generator.GetDirtyDataList(bogus.Random.Int(10,500));
-            listBoxListOfCrap.DataSource = generator.GetDirtyDataList(bogus.Random.Int(10, 25));
-        }
+        #region Event Handlers
 
         private void DataGridViewTrashOnDoubleClick(object sender, EventArgs e)
         {
@@ -138,9 +119,15 @@ namespace CustomerProperlyRegrets.ViewsWindowsWhatever
 
         private void UnknownToolStripMenuItemOnClick(object sender, EventArgs e)
         {
-            var window = new RandomPictureWindow {StartPosition = FormStartPosition.CenterParent};
+            var window = new RandomPictureWindow { StartPosition = FormStartPosition.CenterParent };
             window.Show();
 
+        }
+
+        private void ChickensToolStripMenuItemOnClick(object sender, EventArgs e)
+        {
+            var bogus = new Faker();
+            new ChickenSpammer().ShowChicken(bogus.Random.Int(5, 10));
         }
 
         private void OnYearClick(object sender, EventArgs e)
@@ -149,6 +136,30 @@ namespace CustomerProperlyRegrets.ViewsWindowsWhatever
             MessageBox.Show(
                 "A new configuration file is now on your desktop. Please do not delete it, or the whole world will end.",
                 "IMPORTANT CONFIG FILE CREATED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        #endregion
+
+        private void BindData()
+        {
+            var bogus = new Faker();
+            var generator = new DirtyDataGenerator();
+            dataGridViewTrash.DataSource = generator.GetDirtyDataList(bogus.Random.Int(10,500));
+            listBoxListOfCrap.DataSource = generator.GetDirtyDataList(bogus.Random.Int(10, 25));
+        }
+
+        private void GetYearsForToolStrip()
+        {
+            var futureDate = DateTime.Now.AddYears(+1);
+            yearsToolStripMenuItem.DropDownItems.Add(futureDate.Year.ToString());
+
+            yearsToolStripMenuItem.DropDownItems.Add(DateTime.Now.Year.ToString());
+
+            for (int i = 1; i < 7; i++)
+            {
+                var date = DateTime.Now.AddYears(-i);
+                yearsToolStripMenuItem.DropDownItems.Add(date.Year.ToString());
+            }
         }
 
         private void ShowItsDirtyMessage(DirtyData selectedItem)

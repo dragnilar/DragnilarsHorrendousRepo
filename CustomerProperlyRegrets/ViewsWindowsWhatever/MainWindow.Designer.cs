@@ -264,7 +264,6 @@
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Probably Regrets Buying This";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dirtyDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrash)).EndInit();
             this.menuStrip1.ResumeLayout(false);

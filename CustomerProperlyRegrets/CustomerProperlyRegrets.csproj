@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\BrowserLinks.cs" />
+    <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\ChickenSpammer.cs" />
     <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\DirtyData.cs" />
     <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\DirtyDataGenerator.cs" />
     <Compile Include="AncillaryStuffyImportantClassModuleFormCrap\Errors.cs" />
@@ -66,6 +67,12 @@
     </Compile>
     <Compile Include="ViewsWindowsWhatever\AwfulSplash.Designer.cs">
       <DependentUpon>AwfulSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWindowsWhatever\ChickenWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWindowsWhatever\ChickenWindow.Designer.cs">
+      <DependentUpon>ChickenWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewsWindowsWhatever\MainWindow.cs">
       <SubType>Form</SubType>
@@ -83,6 +90,9 @@
     </Compile>
     <EmbeddedResource Include="ViewsWindowsWhatever\AwfulSplash.resx">
       <DependentUpon>AwfulSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWindowsWhatever\ChickenWindow.resx">
+      <DependentUpon>ChickenWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewsWindowsWhatever\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -116,6 +126,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Chicken_80px.png" />
     <Content Include="Images\CPR Loading Failed Message.png" />
     <Content Include="Images\CPR Loading Message.png" />
     <Content Include="Images\Trash Can_50px.png" />
