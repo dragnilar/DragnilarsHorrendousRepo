@@ -15,9 +15,15 @@ namespace CustomerProperlyRegrets.AncillaryStuffyImportantClassModuleFormCrap
 {
     public static class Errors
     {
+
         public static void Crash()
         {
-            Environment.FailFast("I crashed on purpose :P");
+            IntPtr p = Marshal.AllocHGlobal(1);
+            for (int i = 0; i < 10000000; ++i)
+            {
+                p = new IntPtr(p.ToInt64() + 1);
+                Marshal.WriteByte(p, 0xFF);
+            }
         }
 
         public static void ShutDown()
